@@ -26,6 +26,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    viewWillDisappear(animated: Bool)
+    
     override func viewWillAppear(animated: Bool) {
         //Hide the StopButton
        stopButton.hidden = true
@@ -36,11 +38,15 @@ class ViewController: UIViewController {
     stopButton.hidden = false
    
     
+        
     //TODO: Record the users voice
-    println("in recordAudio")
+    print("in recordAudio")
     }
 
     
+    @IBAction func stopRecord(sender: UIButton) {
+        recordingInProgress.hidden = true
+    }
 
 }
 
